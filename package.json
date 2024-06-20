@@ -1,0 +1,18 @@
+{
+  "name": "swiggyfrontend",
+  "version": "1.0.0",
+  "description": "This is a food ordering application project",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shyamajay"
+  },
+  "keywords": [
+    "foodapp"
+  ],
+  "author": "Shyam Nehruji",
+  "license": "ISC"
+}
