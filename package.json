@@ -4,6 +4,8 @@
   "description": "This is a food ordering application project",
   "main": "App.js",
   "scripts": {
+    "dev" : "parcel index.html",
+    "prod": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -14,5 +16,13 @@
     "foodapp"
   ],
   "author": "Shyam Nehruji",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
 }
