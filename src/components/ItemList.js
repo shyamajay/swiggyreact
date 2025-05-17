@@ -1,6 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
+import { addItems } from "../utils/cartSlice";
+
 const ItemList = (props) => {
   const { items } = props;
   console.log(items);
+  const dispatch = useDispatch();
+  const handleItems = (item) => {
+    console.log(item);
+    dispatch(addItems(item));
+  };
+
   // console.log(cData.card.card.itemCards[0].card.info.imageId);
   return (
     <div>
@@ -29,7 +38,15 @@ const ItemList = (props) => {
                 item.card.info.imageId
               }
             />
+            <button
+              className='rounded bg-slate-400 block p-2 w-16 mt-2 mx-auto'
+              onClick={() => handleItems(item)}>
+              Add
+            </button>
           </div>
+          {/* <div>
+            <button className='rounded bg-slate-400 mr-9'>Add</button>
+          </div> */}
         </div>
       ))}
     </div>

@@ -3,11 +3,13 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import swiggyLogo from "../../swiggy-logo.webp";
 import { useContext } from "react";
 import UserContext from "../utils/UserContext.js";
+import { useSelector } from "react-redux";
 /*
 Header component
 */
 const HeaderComponent = () => {
   const onlineStatus = useOnlineStatus();
+  const cartItems = useSelector((store) => store.cart.items);
 
   const { loggedInUser } = useContext(UserContext);
   return (
@@ -32,7 +34,9 @@ const HeaderComponent = () => {
           <li className='px-2'>
             <Link to='/contact-us'>Contact Us</Link>
           </li>
-          <li className='px-2'>Cart</li>
+          <li className='px-2 font-bold'>
+            <Link to='/cart'>Cart {cartItems.length}</Link>
+          </li>
         </ul>
         <ul>
           <li className='list-none'>{loggedInUser}</li>
